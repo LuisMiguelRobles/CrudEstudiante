@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="includes/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAgregar">
+                                    Agregar
+                                </button>
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="buscar">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnBuscar">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </header>
+
+        <div class="row">
+            <!-- Button trigger modal -->
+
+
+            <!-- Modal Agrerar-->
+            <div class="modal fade" id="modalAgregar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Agregar</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="name">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su Nombre">
+
+                            </div>
+                            <div class="form-group">
+                                <label for="userName">Apellido</label>
+                                <input type="text" class="form-control" id="apellido" placeholder="Ingrese su Apellido">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Cedula</label>
+                                <input type="email" class="form-control" id="cedula" placeholder="Ingrese su Cedula">
+
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary" id="add">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Fin Agregar-->
+
+            <!-- Modal Editar-->
+            <div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Editar</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="form-group">
+                                <label for="name">Id</label>
+                                <input type="number" class="form-control" id="Id" disabled>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Nombre</label>
+                                <input type="text" class="form-control" id="nombreEditar" placeholder="Enter name">
+
+                            </div>
+                            <div class="form-group">
+                                <label for="userName">Apellido</label>
+                                <input type="text" class="form-control" id="apellidoEditar" placeholder="Enter UserName">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Cedula</label>
+                                <input type="email" class="form-control" id="cedulaEditar" placeholder="Enter email">
+
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary" id="editar">Editar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="render">
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="consulta">
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <script src="includes/jquery-3.3.1.min.js"></script>
+    <script src="includes/js/bootstrap.min.js"></script>
+    <script src="js/student.js"></script>
+</body>
+
+</html>
